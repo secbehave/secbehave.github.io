@@ -1,11 +1,64 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-<head>
-   <!-- HTML meta refresh URL redirection -->
-   <meta http-equiv="refresh" content="0; url=http://google.com/" />
-</head>
-<body>
-</body>
+	<head>
+		<title>SecBehave</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script>
+		function getParameterByName(name, url)
+		{
+			if (!url) url = window.location.href;
+
+			name = name.replace(/[\[\]]/g, '\\$&');
+			var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+				results = regex.exec(url);
+
+			if (!results) return null;
+			if (!results[2]) return '';
+
+			return decodeURIComponent(results[2].replace(/\+/g, ' '));
+		}
+
+		function launch()
+		{
+			var rid = getParameterByName("rid");
+			alert(rid == null);
+			if(rid == null)
+			{
+			  //set a default campaign just in case
+			  rid = "EOG75aL";
+			}
+			alert(rid);
+			location.replace("https://secbehave.com/?id=98as67dki508ua3sh534dkjas435hjd43as98d7sd&track=email&rid="+rid);
+		}
+		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>SecBehave</h1>
+				<p>A security behavior project<br />
+
+					<button onclick="launch()">Launch the application</button>
+			</header>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="copyright">
+					<li>&copy; SecBehave.com</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
-
-
